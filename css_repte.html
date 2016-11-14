@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>css尽量减少代码量</title>
+    <style type="text/css">
+        body{
+            font-size: 32px;
+        }
+        div {
+            margin: 50px auto;
+        }
+        .btn{
+            padding: 6px 16px;
+            /*font-size: 18px;*/
+            background: #58a linear-gradient(#77a0bb,#58a);
+            border: 1px solid #446d88;  
+            border-radius:5px;
+            line-height: 20px;
+            box-shadow:0 1px 5px gray;
+            text-shadow: 0 -1px -1px #335166;
+            text-align: center;
+
+        }
+        .btn_1{
+            font-size: 20px;
+            line-height: 1.5;
+            padding: 6px 16px; 
+            background: #58a linear-gradient(#77a0bb, #58a);
+            border:1px solid #446d88;   
+            border-radius: 5px;
+            box-shadow:0 1px 5px gray;
+            text-shadow:0 -1px -1px #335166;
+            text-align: center;
+        }
+        .btn_2{
+            font-size:125%;
+            line-height: 1.5;
+            padding: 6px 16px; 
+            background: #58a linear-gradient(#77a0bb, #58a);
+            border:1px solid #446d88;   
+            border-radius: 5px;
+            box-shadow:0 1px 5px gray;
+            text-shadow:0 -1px -1px #335166;
+            text-align: center;
+        }
+        .btn_3{
+            font-size:125%;
+            line-height: 1.5;
+            padding: .3em .8em; 
+            background: #58a linear-gradient(#77a0bb, #58a);
+            border:1px solid #446d88;   
+            border-radius: 5px;
+            box-shadow:0 .05em .25em gray;
+            text-shadow:0 -.05em .05em #335166;
+            text-align: center;
+        }
+
+        .btn_4{
+            font-size:125%;
+            line-height: 1.5;
+            padding: .3em .8em; 
+            background: #58a linear-gradient(hsla(0,0%,100%,.2),transparent);
+            border:1px solid #446d88;   
+            border-radius: 5px;
+            box-shadow:0 .05em .25em rgba(0,0,0,.5);
+            text-shadow:0 -.05em .05em rgba(0,0,0,.5);
+            text-align: center;
+            color: #fff;
+        }
+        .cancel {
+            background-color: #c00;
+        }
+        .ok {
+            background-color: #6b0;
+        }
+        .hr_1{
+            height: .5em;
+            background:currentColor;
+        }
+        .callout {
+            position: relative;
+            font-size: inherit;
+            width: 100%;
+            border:1px solid gray;
+            background:yellow;
+        }
+        .callout::after {
+            content:"" ;
+            position: absolute;
+            top: -.4em;
+            left:1em;
+            padding:.35em;
+            background:inherit;
+            border:inherit;
+            border-right:0;
+            border-bottom: 0;
+            transform: rotate(45deg);
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="btn">Yes！</div>
+    <div class="btn_1">Yes! 1</div>
+    <div class="btn_2">Yes! 2</div>
+    <div class="btn_3">Yes! 3</div>
+    <div class="btn_4">Yes! 4</div>
+    <div class="btn_4 cancel">cancel</div>
+    <div class="btn_4 ok">ok</div>
+    <hr class="hr_1">
+    <input class="callout" type="text" name="test">
+
+    
+
+
+</body>
+</html>
