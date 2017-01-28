@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>小球下落</title>
+    <style type="text/css">
+        .session {
+            width: 400px;
+            height: 300px;
+            margin: auto;
+            background: #5080ac;
+            border-bottom: 20px solid green;
+        }
+        .ball {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            margin-left: calc(50% - 25px);
+            background: rgba(233,23,45,1);
+            animation: bounce 3s cubic-bezier(.8,.25,.8,.25);
+        }
+
+        @keyframes bounce {
+            60%, 80%, to { 
+                transform: translateY(250px);
+                animation-timing-function: ease-out;
+            }
+            70% {
+                transform: translateY(100px);
+            }
+            90% {
+                transform: translateY(200px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="session">
+        <div class="ball"></div>
+    </div>
+
+</body>
+</html>

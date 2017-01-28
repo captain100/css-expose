@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        css 背景蓝图
+    </title>
+    <style type="text/css">
+        body {
+            background: #58a;
+            background-image: 
+                linear-gradient(white 1px, transparent 0),
+                linear-gradient(90deg, white 1px, transparent 0),
+                linear-gradient(hsla(0, 0%, 100%, .3) 1px, transparent 0),
+                linear-gradient(90deg, hsla(0, 0%, 100%, .3) 1px, transparent 0);
+            background-size: 75px 75px, 75px 75px, 15px 15px, 15px 15px;
+        }
+        .section {
+            width: 300px;
+            height: 300px;
+            margin: 20px;
+            display: inline-block;
+        }
+        .bg-image-1 {
+            background: #655;
+            background-image: radial-gradient(tan 30%, transparent 0);
+            background-size: 30px 30px;
+        }
+        .bg-image-2 {
+            background: #655;
+            background-image: radial-gradient(tan 30%, transparent 0),
+                    radial-gradient(tan 30%, transparent 0);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+        }
+        .bg-image-3 {
+            background: #eee;
+            background-image: linear-gradient(tan 30%, transparent 0),
+                    radial-gradient(tan 30%, transparent 0);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+        }
+        .bg-image-4 {
+            background: #eee;
+            background-image: linear-gradient(45deg, #bbb 50%, transparent 0);
+            background-size: 30px 30px;
+        }
+        .bg-image-5 {
+            background: #eee;
+            background-image: linear-gradient(45deg, transparent 60%, #bbb 0);
+            background-size: 30px 30px;
+        }
+        .bg-image-6 {
+            background: #eee;
+            background-image: 
+                linear-gradient(45deg, #bbb 25%, transparent 0),
+                linear-gradient(45deg, transparent 75%, #bbb 0);
+            background-size: 30px 30px;
+        }
+        .bg-image-7 {
+            background: #eee;
+            background-image: 
+                linear-gradient(45deg, #bbb 25%, transparent 0),
+                linear-gradient(45deg, transparent 75%, #bbb 0);
+            background-position: 0 0, 15px 15px;
+            background-size: 30px 30px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="section bg-image-1"></div>
+    <div class="section bg-image-2"></div>
+    <div class="section bg-image-3"></div>
+    <div class="section bg-image-4"></div>
+    <div class="section bg-image-5"></div>
+    <div class="section bg-image-6"></div>
+    <div class="section bg-image-7"></div>
+    <div class="section bg-image-8"></div>
+
+
+
+</body>
+</html>

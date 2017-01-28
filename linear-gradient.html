@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>背景渐变色</title>
+    <style type="text/css">
+
+    .container {
+        width: 100px;
+        height: 180px;
+        /*background: linear-gradient(#fb3, #58a);*/
+        background: linear-gradient(#fb3 50%, #58a 0);
+        background-size: 100% 30px;
+
+    }
+    .container2 {
+        width: 400px;
+        height: 80px;
+        background:linear-gradient(45deg, #fb3 50%,#58a 50%);
+        background-size: 30px 30px;
+    } 
+    .container2::after{
+        margin-bottom: 30px;
+    }
+    .container3 {
+        width: 400px;
+        height: 80px;
+        background:linear-gradient(45deg, #fb3 25%, #58a 0, #58a 50%, #fb3 0, #fb3 75%, #58a 0);
+        background-size: 30px 30px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+    <div class="container2"></div>
+
+    <div class="container3"></div>
+
+
+    
+
+</body>
+</html>
