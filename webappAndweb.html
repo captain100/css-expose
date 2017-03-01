@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>webapp与web之间的对比</title>
+</head>
+<body>
+    <style type="text/css">
+        body {
+            background: #ccc;
+        }
+        .container  {
+            margin: .1rem;
+            border: 1px solid #58a;
+            padding: .1rem;
+            width: 2rem;
+            height: 2rem;
+            background: yellowgreen;
+        }   
+
+        @media screen and (min-width: 100px) and  (max-width: 180px) {
+            body {background: #f00}
+        } 
+        @media screen and (min-width: 180px) and (max-width: 260px) {
+            body {background: #ff9}
+        }
+        @media screen and (min-width: 260px) and (max-width: 340px) {
+            body {background: #6f3}
+        }
+        @media screen and (min-width:400px) { 
+            body { background: #000}
+        }
+    </style>
+
+    <div class="container"></div>
+
+    <script type="text/javascript">
+    function init() {
+        var width = document.documentElement.clientWidth
+        document.documentElement.setAttribute('style', 'font-size:' + width / 6.4 +'px')
+        var scale = 1 / window.devicePixelRatio;
+        document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+    }
+    window.onresize = function() {
+        init()
+    }
+    init()
+    </script>
+</body>
+</html>

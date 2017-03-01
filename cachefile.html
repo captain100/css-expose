@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="cn" manifest="cache.manifest">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+  <title>离线缓存</title>
+</head>
+<body>
+<script type="text/javascript" src="cache.js"></script>
+<script type="text/javascript">
+  var cache = window.applicationCache
+  console.log(111, test)
+  function load(url, callback){
+    var script = document.createElement('script')
+    script.src = url
+    script.onload = function() {
+      callback && callback()
+    }
+    document.body.appendChild(script)
+  }
+  cache.addEventListener('updateready', function(){
+    console.log('更新完毕')
+    load('cache.js', function(){
+      console.log('更新完毕', test)
+    })  
+  })
+  setInterval(function() {
+    cache.update()
+  }, 3000)
+</script>
+</body>
+</html>
